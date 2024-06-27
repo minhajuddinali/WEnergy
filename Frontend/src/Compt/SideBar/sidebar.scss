@@ -1,0 +1,267 @@
+:root {
+    --primaryColor: hsl(244, 25%, 13%);
+    --hoverColor: hsl(203, 100%, 56%);
+    --planBlue: rgb(115, 222, 193);
+    --whiteColor: rgb(244, 244, 244);
+    --blackColor: rgb(44, 40, 40);
+    --greyText: hsl(0, 0%, 75%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    //font size
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img,
+video {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    background-color: red;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--greyText);
+}
+
+.btn .icon {
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background-color: var(--planBlue);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.sideBar {
+    background: #1a1a2e;
+    color: white;
+    box-shadow: 1px 0px 4rem var(--greyText);
+    border: 1px solid black;
+    width: 18%;
+    height: 100%;
+    gap: 3rem;
+    overflow: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .logoDiv {
+        padding: 1.5rem 1.5rem 0;
+        cursor: pointer;
+
+        img {
+            width: 60px;
+            margin-right: 0.5rem;
+            background: transparent;
+            border-radius: 2px;
+            padding: 0.2rem;
+        }
+        h2 {
+            font-size: var(--h2FontSize);
+            // background: linear-gradient(to right, red, blue);
+            background: linear-gradient(
+                to right,
+                #a7bfe8,
+                #6190e8
+            ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background: -webkit-linear-gradient(to right, #86aced, #1d55bc);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+        }
+    }
+    // .profile {
+    //     // padding: 1.5rem 1.5rem 0;
+    //     .place {
+    //         border-radius: 50%;
+    //         width: 50px;
+    //         height: 50px;
+    //         background: gray;
+    //         position: relative;
+    //     }
+    //     img {
+    //         position: relative;
+    //         width: 100px;
+    //         z-index: 1;
+    //     }
+    // }
+
+    .menuDiv,
+    .settingsDiv {
+        .divTitle {
+            font-size: var(--h3FontSize);
+            color: white;
+            padding: 0 1.5rem 1.5rem;
+            font-weight: 700;
+        }
+
+        .menuLists {
+            .listItem {
+                padding: 0.3rem 1.5rem;
+                width: 100%;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 0%;
+                    left: 0;
+                    width: 5px;
+                    bottom: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background-color: rgb(11, 90, 170);
+                }
+
+                .menuLink {
+                    color: white;
+                    font-weight: 500;
+                    transition: 0;
+                    .icon {
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                &:hover .menuLink {
+                    color: rgb(11, 90, 170);
+                    transition: 0;
+                }
+
+                &:hover::before {
+                    height: 100%;
+                    transition: 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .sideBarCard {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            background-color: white;
+            color: #1a1a2e;
+            border: 10px solid var(--whiteColor);
+            font-size: 3rem;
+            border-radius: 50%;
+            top: -8px;
+            right: 50%;
+            transform: translate(50%);
+            z-index: 100;
+        }
+        .cardContent {
+            position: relative;
+            padding: 1rem;
+            border: 2px solid black;
+            // background: rgb(78, 242, 231);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            overflow: hidden;
+
+            h3 {
+                font-size: var(--h3FontSize);
+                margin-top: 1rem;
+                padding: 1rem 0;
+                font-weight: 800;
+                color: black;
+            }
+
+            p {
+                font-size: var(--normalFontSize);
+                color: rgb(205, 194, 194);
+                font-weight: 900;
+                padding-bottom: 1rem;
+                font-weight: 500;
+            }
+            .btn {
+                background: rgb(91, 148, 6);
+                position: relative;
+                color: black;
+                font-size: larger;
+                font-weight: bold;
+                z-index: 1000;
+            }
+
+            .circle1,
+            .circle2 {
+                position: absolute;
+                background: rgb(28, 125, 199);
+                border-radius: 50%;
+                opacity: 0.7;
+            }
+
+            .circle1 {
+                height: 100px;
+                width: 100px;
+                top: -50px;
+                left: -50px;
+            }
+            .circle2 {
+                height: 150px;
+                width: 150px;
+                bottom: -80px;
+                right: -70px;
+                z-index: 1;
+            }
+        }
+    }
+}
+.sideBar::-webkit-scrollbar {
+    display: none;
+}

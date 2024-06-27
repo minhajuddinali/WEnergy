@@ -1,0 +1,118 @@
+:root {
+    --primaryColor: hsl(244, 25%, 13%);
+    --hoverColor: hsl(203, 100%, 56%);
+    --planBlue: rgb(115, 222, 193);
+    --whiteColor: rgb(244, 244, 244);
+    --blackColor: rgb(44, 40, 40);
+    --greyText: hsl(0, 0%, 75%);
+    --textColor: hsl(240, 1%, 48%);
+    --bgColor: hsl(113, 11%, 85%);
+    --inputColor: hsl(330, 12%, 97%);
+    --inputColor: hsl(154, 14%, 90%);
+
+    //font size
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+html {
+    font-size: 90%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.icon {
+    font-size: var(--h2FontSize);
+    cursor: pointer;
+}
+
+img,
+video {
+    height: auto;
+    width: 100%;
+}
+
+.message {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    color: var(--whiteColor);
+    background-color: red;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    color: var(--greyText);
+}
+
+.btn .icon {
+    margin-left: 0.5rem;
+}
+
+.btn:hover {
+    color: var(--primaryColor);
+    background-color: var(--planBlue);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.Bod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+    height: 100vh;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.cont {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(251, 254, 255, 0.951);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    overflow: hidden;
+    // border-radius: 1rem;
+    box-shadow: 2px 2px 8px rgba(18, 26, 24, 0.63);
+}
+.sideBar {
+    .logoDiv {
+        .dot {
+            color: yellow;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primaryColor: hsl(244, 25%, 13%);
+  --hoverColor: hsl(203, 100%, 56%);
+  --planBlue: rgb(115, 222, 193);
+  --whiteColor: rgb(244, 244, 244);
+  --blackColor: rgb(44, 40, 40);
+  --greyText: hsl(0, 0%, 75%);
+  --bgColor: hsl(113, 11%, 85%);
+  --inputColor: hsl(330, 12%, 97%);
+  --inputColor: hsl(154, 14%, 90%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+body {
+  background-color: rgba(209, 209, 201, 0.651);
+}/*# sourceMappingURL=App.css.map */
